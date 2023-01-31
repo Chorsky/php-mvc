@@ -26,7 +26,4 @@ class Organization
    * @var string
   */
   public $description = 'Aliquip eiusmod labore proident quis est nulla ex incididunt do sunt aliquip. Id Lorem aliquip labore irure occaecat adipisicing. Commodo est exercitation anim occaecat incididunt pariatur aliqua labore cillum laboris sint. Labore exercitation irure enim labore culpa laborum esse ad irure deserunt.';
-
-  
-
 }

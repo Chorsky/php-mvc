@@ -1,29 +1,29 @@
 <?php
-    namespace App\Controller\Pages;
 
-    use \App\Utils\View;
-    use \App\Model\Entity\Organization;
+namespace App\Controller\Pages;
 
-    class Home extends Page
-    {
-        /**
-         * Método resposanvel por retornar o conteúdo {view} da home
-         * @return string
-         */
+use \App\Utils\View;
+use \App\Model\Entity\Organization;
 
-        public static function getHome() 
-        {           
-            //ORGANIZAÇÃO
-            $obOrganization = new Organization;          
-            
-            //VIEW DA HOME
-            $content = View::render('pages/home', [
-                'name' => $obOrganization->name,
-                'description' => $obOrganization->description,
-                'site' => $obOrganization->site
-            ]);
+class Home extends Page
+{
+    /**
+    * Método responsavel por retornar o conteúdo {view} da home
+    * @return string
+    */
+    public static function getHome() 
+    {           
+        //ORGANIZAÇÃO
+        $obOrganization = new Organization;    
 
-            // RETORNA A VIEW DA PÁGINA
-            return parent::getPage('Evernet', $content);
-        }
+        //VIEW DA HOME
+        $content = View::render('pages/home', [
+            'name' => $obOrganization->name,
+            'description' => $obOrganization->description,
+            'site' => $obOrganization->site
+        ]);
+        
+        // RETORNA A VIEW DA PÁGINA
+        return parent::getPage('Evernet', $content);
     }
+}
