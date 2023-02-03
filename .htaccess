@@ -1,0 +1,6 @@
+#LIGAR O REWRITE DE URL
+RewriteEngine On
+
+#REGRA DE REWRITE TUDO PARA INDEX
+RewriteCond %{SCRIPT_FILENAME} !-f 
+RewriteRule ^([a-zA-Z0-9+_\/-]+)$ index.php?url=$1 [QSA]
